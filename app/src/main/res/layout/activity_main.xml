@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_connection"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/color_yellow"
+                android:gravity="center"
+                android:text="@string/no_internet"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/view_connection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_white"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

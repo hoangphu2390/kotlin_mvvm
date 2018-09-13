@@ -1,0 +1,186 @@
+<resources>
+
+    <string name="test_notification_status_waiting">Order <b>12345</b> has been <b>Waiting</b></string>
+    <string name="test_notification_status_completed">Order <b>12346</b>  has been <b>Completed</b></string>
+    <string name="test_notification_status_pickuped">Order <b>12355</b> has been <b>Pickuped</b></string>
+    <string name="test_notification_status_failed">Order <b>184345</b> has been <b>Failed</b></string>
+    <string name="test_notification_status_assigned">Order <b>10456</b> has been <b>Assigned</b></string>
+
+
+    <!--KEY THIRD PARTY-->
+    <string name="facebook_appid">129770454453740</string>
+    <!--KEY MODE LIVE ADDRESS SERVER -->
+    <string name="server_address_live">http://api.istream4you.com/api/</string>
+    <!--KEY MODE LIVE STRIPE -->
+    <string name="com.stripe.publishable_key" translatable="false">pk_live_ri2smj1o9VDm2eHKHv04BDJZ</string>
+
+
+    <!--GENERAL APP-->
+    <string name="app_name">"Help In Hand Admin"</string>
+    <string name="setting">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="accept">Accept</string>
+    <string name="appprove">Approve</string>
+    <string name="payment">Payment</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
+    <string name="close">Close</string>
+    <string name="name">Name</string>
+    <string name="full_name">Full Name</string>
+    <string name="name_store">Store/ Restaurant name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="phone">Phone</string>
+    <string name="address_original">Address Original</string>
+    <string name="address_destination">Address Destination</string>
+    <string name="address">Address</string>
+    <string name="price">Price</string>
+    <string name="amount">Amount</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="notification">NOTIFICATION</string>
+    <string name="update">Update</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="feature_is_comming_soon">Feature is comming soon</string>
+    <string name="note">Notes</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="remove">Remove</string>
+    <string name="total">Total</string>
+    <string name="done">Done</string>
+    <string name="back_create_order">Back create order</string>
+    <string name="logout">Logout</string>
+    <string name="_city">City</string>
+    <string name="_state">State</string>
+    <string name="_zip">Zip</string>
+    <string name="delelte">Delete</string>
+    <string name="review">Review</string>
+    <string name="change">Change</string>
+    <string name="send">Send</string>
+    <string name="remind_me_later">Remind Me Later</string>
+
+    <!--TAB MENU TITLE -->
+    <string name="tab_order_list">Orders</string>
+    <string name="tab_map">Map</string>
+    <string name="tab_account">Account</string>
+    <string name="tab_notifications">Notifications</string>
+    <string name="tab_settings">Settings</string>
+
+    <!--TITLE SCREEN -->
+    <string name="login_screen">LOGIN</string>
+    <string name="map_screen">MAP</string>
+    <string name="order_list_screen">ORDER LIST</string>
+    <string name="accept_order_screen">ACCEPT ORDER</string>
+    <string name="order_detail_screen">ORDER DETAIL</string>
+    <string name="notification_screen">NOTIFICATIONS</string>
+    <string name="summary_order_screen">ORDER SUMMARY</string>
+    <string name="setting_screen">SETTINGS</string>
+    <string name="profile_screen">PROFILE</string>
+    <string name="change_password_screen">CHANGE PASSWORD</string>
+    <string name="show_image_screen">SHOW IMAGE</string>
+    <string name="map_tracking_screen">MAP TRACKING</string>
+    <string name="review_screen">REVIEW</string>
+    <string name="account_screen">ACCOUNT</string>
+    <string name="switch_mode_screen">SWITCH MODE</string>
+    <string name="control_driver_screen">CONTROL DRIVER</string>
+    <string name="fee_setup_screen">FEE SETUP</string>
+    <string name="profile_driver_screen">PROFILE DRIVER</string>
+    <string name="review_driver_screen">REVIEW DRIVER</string>
+    <string name="about_us_screen">ABOUT US</string>
+
+    <!--MESSAGE ALERT-->
+    <string name="no_internet">No internet connection</string>
+    <string name="wrong_email_format">Wrong email format</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="error_internet_connection">The connection is interrupted.Please check your internet connection or try again later</string>
+    <string name="show_error_enter_date">Please enter date</string>
+    <string name="show_msg_screen_shot_successful">Screenshot successful</string>
+    <string name="turn_on_gps">Please turn on GPS</string>
+    <string name="show_error_email">Please enter email</string>
+    <string name="show_error_password">Please enter password</string>
+    <string name="show_error_confirm_password">Please enter confirm password</string>
+    <string name="show_error_length_pwd">Password must be at least 6 characters long"</string>
+    <string name="show_error_length_confirm_pwd">Confirm password must be at least 6 characters long"</string>
+    <string name="error_confirm_pwd_not_same_pwd">Confirm password not same password</string>
+    <string name="show_error_store_name">Please enter store name</string>
+    <string name="show_error_first_name">Please enter first name</string>
+    <string name="show_error_last_name">Please enter last name</string>
+    <string name="show_error_address">Please enter address</string>
+    <string name="show_error_city">Please enter city</string>
+    <string name="show_error_state">Please enter state</string>
+    <string name="show_error_postal_code">Please enter postal code</string>
+    <string name="show_error_phone">Please enter phone</string>
+    <string name="show_error_length_phone">Phone numbers must be 10 digits</string>
+    <string name="show_error_drive_license">Please upload drive_license</string>
+    <string name="show_error_old_password">Please enter old password</string>
+    <string name="show_error_new_password">Please enter new password</string>
+    <string name="show_error_start_time">Please enter working start time</string>
+    <string name="show_error_end_time">Please enter working end time</string>
+    <string name="show_error_old_pwd_incorrect">Old password incorrect</string>
+    <string name="show_error_old_pwd_same_as_new_pwd">New password must be different than old password</string>
+
+
+    <!-- LOGIN SCREEN -->
+    <string name="login">Login</string>
+    <string name="please_enable_all_permission">Please go to item permission, enable all permission must use in app.</string>
+    <string name="sign_in">Sign in</string>
+
+    <!-- REGISTER SCREEN -->
+    <string name="organization">Organization</string>
+    <string name="personal">Personal</string>
+    <string name="organization_lower">organization</string>
+    <string name="personal_lower">personal</string>
+    <string name="sign_up_means_you_agree">Sign up means you agree"</string>
+    <string name="terms_of_user_pricy_policy"><u>Terms of use, Privacy Policy</u></string>
+    <string name="powered_by_helpinhand">powered by Help In Hand</string>
+
+
+    <!-- CREATE ORDER SCREEN -->
+    <string name="prepaid">Prepaid</string>
+    <string name="pick_up_money">Pick Up Money</string>
+    <string name="prepaid_lower">prepaid</string>
+    <string name="pick_up_money_lower">pick_up_money</string>
+    <string name="shop_name">Shop Name</string>
+    <string name="item_1">Item 1</string>
+    <string name="item_2">Item 2</string>
+    <string name="item_3">Item 3</string>
+    <string name="item_4">Item 4</string>
+    <string name="finding_driver_nearby_driver">Finding you a nearby driver. Please wait a moment...</string>
+    <string name="forgot_password_underline"><u>Forgot password?</u></string>
+    <string name="i_need_a_driver">I need a Driver</string>
+    <string name="estimate_amount">Estimate Amount</string>
+
+    <!-- DETAIL ORDER SCREEN -->
+    <string name="see_on_map">See on map</string>
+    <string name="the_system_is_finding_your_driver_please_wait_a_moment">The system is finding your driver.\nPlease wait a moment...</string>
+    <string name="creating_order_success">CREATING ORDER\nSUCCESS</string>
+    <string name="change_underline"><u>Change</u></string>
+
+    <!-- FORGOT SCREEN -->
+    <string name="send_email">Send email</string>
+
+    <!-- DETAIL TRACKING DRIVER SCREEN -->
+    <string name="minutes">minutes</string>
+    <string name="expecting_time">Expecting time</string>
+
+    <!-- REVIEW DRIVER SCREEN -->
+    <string name="how_was_your_experience_about_our_driver">How was your experience\nabout our driver</string>
+
+    <!-- ORDER DRIVER SCREEN -->
+    <string name="no_any_order">No order found</string>
+    <string name="no_any_driver">No driver found</string>
+    <string name="view_info"><u>View info</u></string>
+
+    <!-- SETTING SCREEN -->
+    <string name="auto_mode">auto</string>
+    <string name="manual_mode">manual</string>
+    <string name="are_you_sure_change_mode">Are you sure want to change mode?</string>
+    <string name="email_customer_service_feedback_helpinhand_com">Email customer service:\nfeedback@helpinhand.com</string>
+    <string name="terms_of_service"><u>Terms of service</u></string>
+    <string name="view_lasted_features"><u>View lasted features</u></string>
+    <string name="downloading_the_lasted_update_you_will_get_lasted_features_improvements_and_bug_fixes_of_help_in_hand">Downloading the lasted update you will get lasted features, improvements and bug fixes of Help In Hand.</string>
+</resources>

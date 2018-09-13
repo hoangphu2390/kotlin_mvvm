@@ -1,0 +1,183 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+project.ext {
+    supportLibraryVersion = "27.1.1"
+    playServiceVersion = '15.0.1'
+    googledirectionVersion = '1.1.1'
+    firebaseDbVersion = '16.0.1'
+    firebaseCloudVersion = '17.1.0'
+    firebaseRemoteConfigVersion = '16.0.0'
+    mapsUtilsVersion = '0.4'
+    mapsClusteringVersion = '0.1.3'
+    constraintLayoutVersion = "1.0.2"
+    lifecycleVersion = '1.1.1'
+    retrofitVersion = '2.0.0-beta2'
+    daggerVersion = '2.11'
+    javaxAnnotationVersion = '1.0'
+    rxAnnotationVersion = '1.3.2'
+    multidexVersion = '1.0.1'
+    butterknifeVersion = '8.8.1'
+    okHttpVersion = '2.7.2'
+    timberVersion = '4.7.1'
+    picassoVersion = '2.71828'
+    rxJavaVersion = '1.1.0'
+    rxAndroidVersion = '1.1.0'
+    parcelerVersion = '1.1.9'
+    circleimageviewVersion = '2.1.0'
+    cropperVersion = '1.0.1'
+    eventbusVersion = '3.1.1'
+    styleabletoastVersion = '1.0.9'
+    dexterVersion = '4.1.0'
+    compressorVersion = '2.0.0'
+    ripplebackgroundVersion = '1.0.1'
+    glideVersion = '3.7.0'
+    loadingVersion = '2.1.3'
+    bottomNavigationVersion = '1.2.4'
+    roundedimageviewVersion = '2.3.0'
+    properRatingBarVersion = 'v0.0.3'
+    togglebuttonVersion = '1.0.0'
+}
+
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.basekotlin"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
+    }
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    kapt {
+        generateStubs = true
+    }
+}
+
+dependencies {
+    //DEFAULT
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //ANDROID SUPPORT LIBRARY
+    implementation "com.android.support.constraint:constraint-layout:$project.ext.constraintLayoutVersion"
+    implementation "com.android.support:support-annotations:$project.ext.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:$project.ext.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$project.ext.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$project.ext.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$project.ext.supportLibraryVersion"
+    implementation "com.android.support:design:$project.ext.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$project.ext.supportLibraryVersion"
+    implementation "com.android.support:support-annotations:$project.ext.supportLibraryVersion"
+
+    //PLAY SERVICE
+    implementation "com.google.android.gms:play-services-maps:$project.ext.playServiceVersion"
+    implementation "com.google.android.gms:play-services-auth:$project.ext.playServiceVersion"
+    implementation "com.google.android.gms:play-services-base:$project.ext.playServiceVersion"
+    implementation "com.google.android.gms:play-services-location:$project.ext.playServiceVersion"
+    implementation "com.google.android.gms:play-services-places:$project.ext.playServiceVersion"
+    implementation "com.google.firebase:firebase-messaging:$project.ext.firebaseCloudVersion"
+    implementation "com.google.firebase:firebase-database:$project.ext.firebaseDbVersion"
+    implementation "com.google.firebase:firebase-config:$project.ext.firebaseRemoteConfigVersion"
+
+    //LIFE CYCLE
+    implementation "android.arch.lifecycle:extensions:$project.ext.lifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$project.ext.lifecycleVersion"
+
+    //DATA BINDING
+    kapt "com.android.databinding:compiler:2.3.3"
+
+    //MAP CLUSTER
+    implementation "net.sharewire:google-maps-clustering:$project.ext.mapsClusteringVersion"
+    implementation "com.google.maps.android:android-maps-utils:$project.ext.mapsUtilsVersion"
+
+    //SQUARE
+    implementation "com.squareup.retrofit:retrofit:$project.ext.retrofitVersion"
+    implementation "com.squareup.retrofit:converter-gson:$project.ext.retrofitVersion"
+    implementation "com.squareup.retrofit:adapter-rxjava:$project.ext.retrofitVersion"
+
+    //OK-HTTP
+    implementation "com.squareup.okhttp:okhttp:$project.ext.okHttpVersion"
+    implementation "com.squareup.okhttp:logging-interceptor:$project.ext.okHttpVersion"
+
+    //RXJAVA
+    implementation "io.reactivex:rxjava:$project.ext.rxJavaVersion"
+    implementation "io.reactivex:rxandroid:$project.ext.rxAndroidVersion"
+    implementation "javax.annotation:javax.annotation-api:$project.ext.rxAnnotationVersion"
+
+    // DEPENDENCY INJECTION
+    implementation "com.google.dagger:dagger:$project.ext.daggerVersion"
+    implementation "com.google.dagger:dagger-android:$project.ext.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$project.ext.daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$project.ext.daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$project.ext.daggerVersion"
+
+
+    // OTHER
+    implementation "com.jakewharton:butterknife:$project.ext.butterknifeVersion"
+    implementation "com.akexorcist:googledirectionlibrary:$project.ext.googledirectionVersion"
+    kapt "com.jakewharton:butterknife-compiler:$project.ext.butterknifeVersion"
+    implementation "org.greenrobot:eventbus:$project.ext.eventbusVersion"
+    implementation "com.android.support:multidex:$project.ext.multidexVersion"
+    implementation "com.jakewharton.timber:timber:$project.ext.timberVersion"
+    implementation "com.squareup.picasso:picasso:$project.ext.picassoVersion"
+    implementation "org.parceler:parceler-api:$project.ext.parcelerVersion"
+    kapt "org.parceler:parceler:$project.ext.parcelerVersion"
+    implementation "de.hdodenhof:circleimageview:$project.ext.circleimageviewVersion"
+    implementation "com.edmodo:cropper:$project.ext.cropperVersion"
+    implementation "com.muddzdev:styleabletoast:$project.ext.styleabletoastVersion"
+    implementation "com.karumi:dexter:$project.ext.dexterVersion"
+    implementation "id.zelory:compressor:$project.ext.compressorVersion"
+    implementation "com.skyfishjy.ripplebackground:library:$project.ext.ripplebackgroundVersion"
+    implementation "com.github.bumptech.glide:glide:$project.ext.glideVersion"
+    implementation "com.wang.avi:library:$project.ext.loadingVersion"
+    implementation "com.github.ittianyu:BottomNavigationViewEx:$project.ext.bottomNavigationVersion"
+    implementation "com.makeramen:roundedimageview:$project.ext.roundedimageviewVersion"
+    implementation "com.github.techery:ProperRatingBar:$project.ext.properRatingBarVersion"
+    implementation "com.zcw:togglebutton-library:$project.ext.togglebuttonVersion"
+
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.google.gms.google-services'
